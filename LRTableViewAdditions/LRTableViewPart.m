@@ -266,7 +266,7 @@
         }
     }
     
-    return nil;
+    return cell;
 }
 
 - (UITableViewCell *)partCell
