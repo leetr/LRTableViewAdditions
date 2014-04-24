@@ -17,6 +17,10 @@
 		9214EAD419064C3C0064D91E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9214EAD319064C3C0064D91E /* Foundation.framework */; };
 		9214EAD619064C3C0064D91E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9214EAD519064C3C0064D91E /* CoreGraphics.framework */; };
 		9214EAD819064C3C0064D91E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9214EAD719064C3C0064D91E /* UIKit.framework */; };
+		928620A01908B9BB00A40170 /* CustomCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286209F1908B9BB00A40170 /* CustomCell1.m */; };
+		928620A31908BEEB00A40170 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 928620A21908BEEB00A40170 /* Car.m */; };
+		928620A51908C06700A40170 /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928620A41908C06700A40170 /* NibCell.xib */; };
+		928620A81908C15C00A40170 /* NibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 928620A71908C15C00A40170 /* NibCell.m */; };
 		92B3DCC91908B1C5009AC7ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B3DCBF1908B1C5009AC7ED /* AppDelegate.m */; };
 		92B3DCCA1908B1C5009AC7ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B3DCC01908B1C5009AC7ED /* Main.storyboard */; };
 		92B3DCCB1908B1C5009AC7ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92B3DCC21908B1C5009AC7ED /* InfoPlist.strings */; };
@@ -46,6 +50,13 @@
 		9214EAD519064C3C0064D91E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9214EAD719064C3C0064D91E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9214EAF219064C3C0064D91E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9286209E1908B9BB00A40170 /* CustomCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell1.h; sourceTree = "<group>"; };
+		9286209F1908B9BB00A40170 /* CustomCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell1.m; sourceTree = "<group>"; };
+		928620A11908BEEB00A40170 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		928620A21908BEEB00A40170 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		928620A41908C06700A40170 /* NibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibCell.xib; sourceTree = "<group>"; };
+		928620A61908C15C00A40170 /* NibCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibCell.h; sourceTree = "<group>"; };
+		928620A71908C15C00A40170 /* NibCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibCell.m; sourceTree = "<group>"; };
 		92B3DCBE1908B1C5009AC7ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92B3DCBF1908B1C5009AC7ED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92B3DCC11908B1C5009AC7ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +147,13 @@
 				92B3DCC61908B1C5009AC7ED /* main.m */,
 				92B3DCC71908B1C5009AC7ED /* ViewController.h */,
 				92B3DCC81908B1C5009AC7ED /* ViewController.m */,
+				9286209E1908B9BB00A40170 /* CustomCell1.h */,
+				9286209F1908B9BB00A40170 /* CustomCell1.m */,
+				928620A11908BEEB00A40170 /* Car.h */,
+				928620A21908BEEB00A40170 /* Car.m */,
+				928620A41908C06700A40170 /* NibCell.xib */,
+				928620A61908C15C00A40170 /* NibCell.h */,
+				928620A71908C15C00A40170 /* NibCell.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -193,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B3DCCA1908B1C5009AC7ED /* Main.storyboard in Resources */,
+				928620A51908C06700A40170 /* NibCell.xib in Resources */,
 				92B3DCCB1908B1C5009AC7ED /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,11 +226,14 @@
 				920E2CDA1908A99100FCDBEE /* UIViewController+LRTableViewAdditions.m in Sources */,
 				920E2CD91908A99100FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.m in Sources */,
 				920E2CD41908A99100FCDBEE /* LRObservedObject.m in Sources */,
+				928620A01908B9BB00A40170 /* CustomCell1.m in Sources */,
 				920E2CD71908A99100FCDBEE /* LRTableViewSection.m in Sources */,
 				92B3DCCE1908B1C5009AC7ED /* ViewController.m in Sources */,
+				928620A31908BEEB00A40170 /* Car.m in Sources */,
 				92B3DCC91908B1C5009AC7ED /* AppDelegate.m in Sources */,
 				920E2CD61908A99100FCDBEE /* LRTableViewPart.m in Sources */,
 				920E2CD51908A99100FCDBEE /* LRTableViewModel.m in Sources */,
+				928620A81908C15C00A40170 /* NibCell.m in Sources */,
 				92B3DCCD1908B1C5009AC7ED /* main.m in Sources */,
 				920E2CD81908A99100FCDBEE /* LRTableViewUtilities.m in Sources */,
 			);
