@@ -176,13 +176,27 @@
 
 #pragma mark - LRTableViewSectionDelegate
 
+- (void)beginUpdatesForTableViewSection:(LRTableViewSection *)section
+{
+    if (section != nil) {
+        
+        [self.tableView beginUpdates];
+    }
+}
+
+- (void)endUpdatesForTableViewSection:(LRTableViewSection *)section
+{
+    if (section != nil) {
+        
+        [self.tableView endUpdates];
+    }
+}
+
 - (void)tableViewSection:(LRTableViewSection *)section insertRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation
 {
     if (section != nil && indexset != nil) {
         
-        [self.tableView beginUpdates];
         [self.tableView insertRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
-        [self.tableView endUpdates];
     }
 }
 
@@ -190,9 +204,7 @@
 {
     if (section != nil && indexset != nil) {
         
-        [self.tableView beginUpdates];
         [self.tableView deleteRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
-        [self.tableView endUpdates];
     }
 }
 
@@ -200,9 +212,7 @@
 {
     if (section != nil && indexset != nil) {
         
-        [self.tableView beginUpdates];
         [self.tableView reloadRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
-        [self.tableView endUpdates];
     }
 }
 

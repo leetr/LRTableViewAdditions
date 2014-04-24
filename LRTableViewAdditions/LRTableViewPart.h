@@ -16,6 +16,8 @@ typedef void (^PartCellViewSelected)(LRTableViewPart *part, NSIndexPath *indexPa
 
 @protocol LRTableViewPartDelegate <NSObject>
 
+- (void)beginUpdatesForTableViewPart:(LRTableViewPart *)part;
+- (void)endUpdatesForTableViewPart:(LRTableViewPart *)part;
 - (void)tableViewPart:(LRTableViewPart *)part insertRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation;
 - (void)tableViewPart:(LRTableViewPart *)part deleteRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation;
 - (void)tableViewPart:(LRTableViewPart *)part reloadRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation;

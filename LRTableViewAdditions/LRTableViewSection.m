@@ -212,6 +212,21 @@
     return -1;
 }
 
+- (void)beginUpdatesForTableViewPart:(LRTableViewPart *)part
+{
+    if (part != nil && self.delegate != nil && [self.delegate conformsToProtocol:@protocol(LRTableViewSectionDelegate)]) {
+        
+        [self.delegate beginUpdatesForTableViewSection:self];
+    }
+}
+
+- (void)endUpdatesForTableViewPart:(LRTableViewPart *)part
+{
+    if (part != nil && self.delegate != nil && [self.delegate conformsToProtocol:@protocol(LRTableViewSectionDelegate)]) {
+        
+        [self.delegate endUpdatesForTableViewSection:self];
+    }
+}
 
 - (void)tableViewPart:(LRTableViewPart *)part insertRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation
 {

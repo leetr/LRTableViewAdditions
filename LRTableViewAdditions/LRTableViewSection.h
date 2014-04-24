@@ -11,6 +11,9 @@
 
 @protocol LRTableViewSectionDelegate <NSObject>
 
+- (void)beginUpdatesForTableViewSection:(LRTableViewSection *)section;
+- (void)endUpdatesForTableViewSection:(LRTableViewSection *)section;
+
 - (void)tableViewSection:(LRTableViewSection *)section insertRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation;
 - (void)tableViewSection:(LRTableViewSection *)section deleteRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation;
 - (void)tableViewSection:(LRTableViewSection *)section reloadRowsInIndexSet:(NSIndexSet *)indexset withRowAnimation:(UITableViewRowAnimation)animation;

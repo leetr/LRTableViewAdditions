@@ -91,17 +91,68 @@
                     if (![new isKindOfClass:[NSNull class]] && [old isKindOfClass:[NSNull class]] && ![new isKindOfClass:[NSArray class]]) { //object was set
                         
                         indexes = [[NSIndexSet alloc] initWithIndex:0];
+                        
+                        [self.delegate beginUpdatesForTableViewPart:self];
                         [self.delegate tableViewPart:self insertRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                        [self.delegate endUpdatesForTableViewPart:self];
                     }
                     else if ([new isKindOfClass:[NSNull class]] && ![old isKindOfClass:[NSNull class]] && ![old isKindOfClass:[NSArray class]]) { //object was nilled out
                         
                         indexes = [[NSIndexSet alloc] initWithIndex:0];
+                        
+                        [self.delegate beginUpdatesForTableViewPart:self];
                         [self.delegate tableViewPart:self deleteRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                        [self.delegate endUpdatesForTableViewPart:self];
                     }
                     else if (![new isKindOfClass:[NSNull class]] && ![old isKindOfClass:[NSNull class]] && ![new isKindOfClass:[NSArray class]] && ![old isKindOfClass:[NSArray class]]) { //object was replaced
                         
                         indexes = [[NSIndexSet alloc] initWithIndex:0];
+                        
+                        [self.delegate beginUpdatesForTableViewPart:self];
                         [self.delegate tableViewPart:self reloadRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                        [self.delegate endUpdatesForTableViewPart:self];
+                    }
+                    else if ([new isKindOfClass:[NSArray class]] || [old isKindOfClass:[NSArray class]]) {
+                        
+                        NSArray *oldArray = [old isKindOfClass:[NSArray class]] ? (NSArray *)old : nil;
+                        NSArray *newArray = ([new isKindOfClass:[NSArray class]]) ? (NSArray *)new : nil;
+                        
+                        if (oldArray && newArray && oldArray.count == newArray.count) {
+                            
+                            indexes = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, oldArray.count)];
+                            
+                            [self.delegate beginUpdatesForTableViewPart:self];
+                            [self.delegate tableViewPart:self reloadRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                            [self.delegate endUpdatesForTableViewPart:self];
+                        }
+                        else if (oldArray.count > newArray.count) {
+                            
+                            NSIndexSet *toRemove = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(newArray.count, oldArray.count - newArray.count)];
+                            NSIndexSet *toReload = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, newArray.count)];
+                            
+                            [self.delegate beginUpdatesForTableViewPart:self];
+                            [self.delegate tableViewPart:self deleteRowsInIndexSet:toRemove withRowAnimation:self.rowAnimation];
+                            [self.delegate tableViewPart:self reloadRowsInIndexSet:toReload withRowAnimation:self.rowAnimation];
+                            [self.delegate endUpdatesForTableViewPart:self];
+                        }
+                        else if (oldArray.count < newArray.count) {
+                            
+                            NSIndexSet *toReload = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, oldArray.count)];
+                            NSIndexSet *toInsert = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(oldArray.count, (newArray.count - oldArray.count))];
+                            
+                            [self.delegate beginUpdatesForTableViewPart:self];
+                            [self.delegate tableViewPart:self reloadRowsInIndexSet:toReload withRowAnimation:self.rowAnimation];
+                            [self.delegate tableViewPart:self insertRowsInIndexSet:toInsert withRowAnimation:self.rowAnimation];
+                            [self.delegate endUpdatesForTableViewPart:self];
+                        }
+                        else {
+                            
+                            [self.tableView reloadData];
+                        }
+                    }
+                    else {
+                        
+                        [self.tableView reloadData];
                     }
                 }
             } break;
@@ -110,7 +161,9 @@
                 
                 if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(LRTableViewPartDelegate)]) {
                     
+                    [self.delegate beginUpdatesForTableViewPart:self];
                     [self.delegate tableViewPart:self insertRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                    [self.delegate endUpdatesForTableViewPart:self];
                 }
                 break;
                 
@@ -118,7 +171,9 @@
                 
                 if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(LRTableViewPartDelegate)]) {
                     
+                    [self.delegate beginUpdatesForTableViewPart:self];
                     [self.delegate tableViewPart:self deleteRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                    [self.delegate endUpdatesForTableViewPart:self];
                 }
                 break;
              
@@ -126,7 +181,9 @@
                 
                 if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(LRTableViewPartDelegate)]) {
                     
+                    [self.delegate beginUpdatesForTableViewPart:self];
                     [self.delegate tableViewPart:self reloadRowsInIndexSet:indexes withRowAnimation:self.rowAnimation];
+                    [self.delegate endUpdatesForTableViewPart:self];
                 }
                 break;
                 
