@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+#import "UIViewController+LRTableViewAdditions.h"
+
 @interface ViewController : UIViewController
 
 @end
