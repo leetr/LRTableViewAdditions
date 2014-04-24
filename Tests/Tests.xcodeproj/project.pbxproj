@@ -10,15 +10,21 @@
 		920E2C95190653B400FCDBEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2C94190653B400FCDBEE /* Foundation.framework */; };
 		920E2C97190653B400FCDBEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2C96190653B400FCDBEE /* CoreGraphics.framework */; };
 		920E2C99190653B400FCDBEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2C98190653B400FCDBEE /* UIKit.framework */; };
-		920E2C9F190653B400FCDBEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 920E2C9D190653B400FCDBEE /* InfoPlist.strings */; };
-		920E2CA1190653B400FCDBEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CA0190653B400FCDBEE /* main.m */; };
-		920E2CA5190653B400FCDBEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CA4190653B400FCDBEE /* AppDelegate.m */; };
-		920E2CA7190653B400FCDBEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920E2CA6190653B400FCDBEE /* Images.xcassets */; };
 		920E2CAE190653B400FCDBEE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2CAD190653B400FCDBEE /* XCTest.framework */; };
 		920E2CAF190653B400FCDBEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2C94190653B400FCDBEE /* Foundation.framework */; };
 		920E2CB0190653B400FCDBEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2C98190653B400FCDBEE /* UIKit.framework */; };
-		920E2CB8190653B400FCDBEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 920E2CB6190653B400FCDBEE /* InfoPlist.strings */; };
-		920E2CBA190653B400FCDBEE /* LRTableViewTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CB9190653B400FCDBEE /* LRTableViewTestsTests.m */; };
+		920E2CEC1908A9A700FCDBEE /* LRObservedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CDD1908A9A700FCDBEE /* LRObservedObject.m */; };
+		920E2CED1908A9A700FCDBEE /* LRTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CE11908A9A700FCDBEE /* LRTableViewModel.m */; };
+		920E2CEE1908A9A700FCDBEE /* LRTableViewPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CE31908A9A700FCDBEE /* LRTableViewPart.m */; };
+		920E2CEF1908A9A700FCDBEE /* LRTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CE51908A9A700FCDBEE /* LRTableViewSection.m */; };
+		920E2CF01908A9A700FCDBEE /* LRTableViewUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CE71908A9A700FCDBEE /* LRTableViewUtilities.m */; };
+		920E2CF11908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CE91908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.m */; };
+		920E2CF21908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 920E2CEB1908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.m */; };
+		92B3DCB81908B0B9009AC7ED /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDEDB71908AE6D001F5791 /* Tests.m */; };
+		92B3DCBB1908B0F7009AC7ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920E2C96190653B400FCDBEE /* CoreGraphics.framework */; };
+		92B3DCBC1908B0FE009AC7ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92EDEDB51908AE6D001F5791 /* InfoPlist.strings */; };
+		92EDEDB91908AE6D001F5791 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDEDAD1908AE6D001F5791 /* AppDelegate.m */; };
+		92EDEDBC1908AE6D001F5791 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDEDB11908AE6D001F5791 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +38,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		920E2C91190653B400FCDBEE /* LRTableViewTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRTableViewTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		920E2C91190653B400FCDBEE /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		920E2C94190653B400FCDBEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		920E2C96190653B400FCDBEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		920E2C98190653B400FCDBEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		920E2C9C190653B400FCDBEE /* LRTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LRTableViewTests-Info.plist"; sourceTree = "<group>"; };
-		920E2C9E190653B400FCDBEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		920E2CA0190653B400FCDBEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		920E2CA2190653B400FCDBEE /* LRTableViewTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LRTableViewTests-Prefix.pch"; sourceTree = "<group>"; };
-		920E2CA3190653B400FCDBEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		920E2CA4190653B400FCDBEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		920E2CA6190653B400FCDBEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		920E2CAC190653B400FCDBEE /* LRTableViewTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LRTableViewTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		920E2CAC190653B400FCDBEE /* TestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		920E2CAD190653B400FCDBEE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		920E2CB5190653B400FCDBEE /* LRTableViewTestsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LRTableViewTestsTests-Info.plist"; sourceTree = "<group>"; };
-		920E2CB7190653B400FCDBEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		920E2CB9190653B400FCDBEE /* LRTableViewTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRTableViewTestsTests.m; sourceTree = "<group>"; };
+		920E2CDC1908A9A700FCDBEE /* LRObservedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRObservedObject.h; sourceTree = "<group>"; };
+		920E2CDD1908A9A700FCDBEE /* LRObservedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRObservedObject.m; sourceTree = "<group>"; };
+		920E2CDE1908A9A700FCDBEE /* LRTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableViewCellDelegate.h; sourceTree = "<group>"; };
+		920E2CDF1908A9A700FCDBEE /* LRTableViewCellHeightDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableViewCellHeightDelegate.h; sourceTree = "<group>"; };
+		920E2CE01908A9A700FCDBEE /* LRTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableViewModel.h; sourceTree = "<group>"; };
+		920E2CE11908A9A700FCDBEE /* LRTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableViewModel.m; sourceTree = "<group>"; };
+		920E2CE21908A9A700FCDBEE /* LRTableViewPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableViewPart.h; sourceTree = "<group>"; };
+		920E2CE31908A9A700FCDBEE /* LRTableViewPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableViewPart.m; sourceTree = "<group>"; };
+		920E2CE41908A9A700FCDBEE /* LRTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableViewSection.h; sourceTree = "<group>"; };
+		920E2CE51908A9A700FCDBEE /* LRTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableViewSection.m; sourceTree = "<group>"; };
+		920E2CE61908A9A700FCDBEE /* LRTableViewUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTableViewUtilities.h; sourceTree = "<group>"; };
+		920E2CE71908A9A700FCDBEE /* LRTableViewUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTableViewUtilities.m; sourceTree = "<group>"; };
+		920E2CE81908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+LRTableViewCellPartRowNumber.h"; sourceTree = "<group>"; };
+		920E2CE91908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LRTableViewCellPartRowNumber.m"; sourceTree = "<group>"; };
+		920E2CEA1908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LRTableViewAdditions.h"; sourceTree = "<group>"; };
+		920E2CEB1908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LRTableViewAdditions.m"; sourceTree = "<group>"; };
+		92EDEDAC1908AE6D001F5791 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92EDEDAD1908AE6D001F5791 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92EDEDB11908AE6D001F5791 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92EDEDB21908AE6D001F5791 /* TestTarget-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestTarget-Info.plist"; sourceTree = "<group>"; };
+		92EDEDB31908AE6D001F5791 /* Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		92EDEDB61908AE6D001F5791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92EDEDB71908AE6D001F5791 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		92EDEDB81908AE6D001F5791 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B3DCBB1908B0F7009AC7ED /* CoreGraphics.framework in Frameworks */,
 				920E2CAE190653B400FCDBEE /* XCTest.framework in Frameworks */,
 				920E2CB0190653B400FCDBEE /* UIKit.framework in Frameworks */,
 				920E2CAF190653B400FCDBEE /* Foundation.framework in Frameworks */,
@@ -77,8 +98,9 @@
 		920E2C88190653B400FCDBEE = {
 			isa = PBXGroup;
 			children = (
-				920E2C9A190653B400FCDBEE /* LRTableViewTests */,
-				920E2CB3190653B400FCDBEE /* LRTableViewTestsTests */,
+				920E2CDB1908A9A700FCDBEE /* LRTableViewAdditions */,
+				92EDEDAB1908AE6D001F5791 /* Code */,
+				92EDEDB41908AE6D001F5791 /* Tests */,
 				920E2C93190653B400FCDBEE /* Frameworks */,
 				920E2C92190653B400FCDBEE /* Products */,
 			);
@@ -87,8 +109,8 @@
 		920E2C92190653B400FCDBEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				920E2C91190653B400FCDBEE /* LRTableViewTests.app */,
-				920E2CAC190653B400FCDBEE /* LRTableViewTestsTests.xctest */,
+				920E2C91190653B400FCDBEE /* Tests.app */,
+				920E2CAC190653B400FCDBEE /* TestsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,52 +126,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		920E2C9A190653B400FCDBEE /* LRTableViewTests */ = {
+		920E2CDB1908A9A700FCDBEE /* LRTableViewAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				920E2CA3190653B400FCDBEE /* AppDelegate.h */,
-				920E2CA4190653B400FCDBEE /* AppDelegate.m */,
-				920E2CA6190653B400FCDBEE /* Images.xcassets */,
-				920E2C9B190653B400FCDBEE /* Supporting Files */,
+				920E2CDC1908A9A700FCDBEE /* LRObservedObject.h */,
+				920E2CDD1908A9A700FCDBEE /* LRObservedObject.m */,
+				920E2CDE1908A9A700FCDBEE /* LRTableViewCellDelegate.h */,
+				920E2CDF1908A9A700FCDBEE /* LRTableViewCellHeightDelegate.h */,
+				920E2CE01908A9A700FCDBEE /* LRTableViewModel.h */,
+				920E2CE11908A9A700FCDBEE /* LRTableViewModel.m */,
+				920E2CE21908A9A700FCDBEE /* LRTableViewPart.h */,
+				920E2CE31908A9A700FCDBEE /* LRTableViewPart.m */,
+				920E2CE41908A9A700FCDBEE /* LRTableViewSection.h */,
+				920E2CE51908A9A700FCDBEE /* LRTableViewSection.m */,
+				920E2CE61908A9A700FCDBEE /* LRTableViewUtilities.h */,
+				920E2CE71908A9A700FCDBEE /* LRTableViewUtilities.m */,
+				920E2CE81908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.h */,
+				920E2CE91908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.m */,
+				920E2CEA1908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.h */,
+				920E2CEB1908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.m */,
 			);
-			path = LRTableViewTests;
+			name = LRTableViewAdditions;
+			path = ../LRTableViewAdditions;
 			sourceTree = "<group>";
 		};
-		920E2C9B190653B400FCDBEE /* Supporting Files */ = {
+		92EDEDAB1908AE6D001F5791 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				920E2C9C190653B400FCDBEE /* LRTableViewTests-Info.plist */,
-				920E2C9D190653B400FCDBEE /* InfoPlist.strings */,
-				920E2CA0190653B400FCDBEE /* main.m */,
-				920E2CA2190653B400FCDBEE /* LRTableViewTests-Prefix.pch */,
+				92EDEDAC1908AE6D001F5791 /* AppDelegate.h */,
+				92EDEDAD1908AE6D001F5791 /* AppDelegate.m */,
+				92EDEDB11908AE6D001F5791 /* main.m */,
+				92EDEDB21908AE6D001F5791 /* TestTarget-Info.plist */,
+				92EDEDB31908AE6D001F5791 /* Tests-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			path = Code;
 			sourceTree = "<group>";
 		};
-		920E2CB3190653B400FCDBEE /* LRTableViewTestsTests */ = {
+		92EDEDB41908AE6D001F5791 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				920E2CB9190653B400FCDBEE /* LRTableViewTestsTests.m */,
-				920E2CB4190653B400FCDBEE /* Supporting Files */,
+				92EDEDB51908AE6D001F5791 /* InfoPlist.strings */,
+				92EDEDB71908AE6D001F5791 /* Tests.m */,
+				92EDEDB81908AE6D001F5791 /* Tests-Info.plist */,
 			);
-			path = LRTableViewTestsTests;
-			sourceTree = "<group>";
-		};
-		920E2CB4190653B400FCDBEE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				920E2CB5190653B400FCDBEE /* LRTableViewTestsTests-Info.plist */,
-				920E2CB6190653B400FCDBEE /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		920E2C90190653B400FCDBEE /* LRTableViewTests */ = {
+		920E2C90190653B400FCDBEE /* TestTarget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 920E2CBD190653B400FCDBEE /* Build configuration list for PBXNativeTarget "LRTableViewTests" */;
+			buildConfigurationList = 920E2CBD190653B400FCDBEE /* Build configuration list for PBXNativeTarget "TestTarget" */;
 			buildPhases = (
 				920E2C8D190653B400FCDBEE /* Sources */,
 				920E2C8E190653B400FCDBEE /* Frameworks */,
@@ -159,14 +187,14 @@
 			);
 			dependencies = (
 			);
-			name = LRTableViewTests;
+			name = TestTarget;
 			productName = LRTableViewTests;
-			productReference = 920E2C91190653B400FCDBEE /* LRTableViewTests.app */;
+			productReference = 920E2C91190653B400FCDBEE /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
-		920E2CAB190653B400FCDBEE /* LRTableViewTestsTests */ = {
+		920E2CAB190653B400FCDBEE /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 920E2CC0190653B400FCDBEE /* Build configuration list for PBXNativeTarget "LRTableViewTestsTests" */;
+			buildConfigurationList = 920E2CC0190653B400FCDBEE /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				920E2CA8190653B400FCDBEE /* Sources */,
 				920E2CA9190653B400FCDBEE /* Frameworks */,
@@ -177,9 +205,9 @@
 			dependencies = (
 				920E2CB2190653B400FCDBEE /* PBXTargetDependency */,
 			);
-			name = LRTableViewTestsTests;
+			name = Tests;
 			productName = LRTableViewTestsTests;
-			productReference = 920E2CAC190653B400FCDBEE /* LRTableViewTestsTests.xctest */;
+			productReference = 920E2CAC190653B400FCDBEE /* TestsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 920E2C8C190653B400FCDBEE /* Build configuration list for PBXProject "LRTableViewTests" */;
+			buildConfigurationList = 920E2C8C190653B400FCDBEE /* Build configuration list for PBXProject "Tests" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -208,8 +236,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				920E2C90190653B400FCDBEE /* LRTableViewTests */,
-				920E2CAB190653B400FCDBEE /* LRTableViewTestsTests */,
+				920E2C90190653B400FCDBEE /* TestTarget */,
+				920E2CAB190653B400FCDBEE /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,8 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920E2C9F190653B400FCDBEE /* InfoPlist.strings in Resources */,
-				920E2CA7190653B400FCDBEE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920E2CB8190653B400FCDBEE /* InfoPlist.strings in Resources */,
+				92B3DCBC1908B0FE009AC7ED /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920E2CA5190653B400FCDBEE /* AppDelegate.m in Sources */,
-				920E2CA1190653B400FCDBEE /* main.m in Sources */,
+				920E2CF21908A9A700FCDBEE /* UIViewController+LRTableViewAdditions.m in Sources */,
+				920E2CF01908A9A700FCDBEE /* LRTableViewUtilities.m in Sources */,
+				920E2CEC1908A9A700FCDBEE /* LRObservedObject.m in Sources */,
+				920E2CEF1908A9A700FCDBEE /* LRTableViewSection.m in Sources */,
+				92EDEDB91908AE6D001F5791 /* AppDelegate.m in Sources */,
+				920E2CED1908A9A700FCDBEE /* LRTableViewModel.m in Sources */,
+				920E2CF11908A9A700FCDBEE /* UITableViewCell+LRTableViewCellPartRowNumber.m in Sources */,
+				92EDEDBC1908AE6D001F5791 /* main.m in Sources */,
+				920E2CEE1908A9A700FCDBEE /* LRTableViewPart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920E2CBA190653B400FCDBEE /* LRTableViewTestsTests.m in Sources */,
+				92B3DCB81908B0B9009AC7ED /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,24 +290,16 @@
 /* Begin PBXTargetDependency section */
 		920E2CB2190653B400FCDBEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 920E2C90190653B400FCDBEE /* LRTableViewTests */;
+			target = 920E2C90190653B400FCDBEE /* TestTarget */;
 			targetProxy = 920E2CB1190653B400FCDBEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		920E2C9D190653B400FCDBEE /* InfoPlist.strings */ = {
+		92EDEDB51908AE6D001F5791 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				920E2C9E190653B400FCDBEE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		920E2CB6190653B400FCDBEE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				920E2CB7190653B400FCDBEE /* en */,
+				92EDEDB61908AE6D001F5791 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -358,9 +383,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LRTableViewTests/LRTableViewTests-Prefix.pch";
-				INFOPLIST_FILE = "LRTableViewTests/LRTableViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Code/Tests-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Code/TestTarget-Info.plist";
+				PRODUCT_NAME = Tests;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -371,9 +396,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LRTableViewTests/LRTableViewTests-Prefix.pch";
-				INFOPLIST_FILE = "LRTableViewTests/LRTableViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Code/Tests-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Code/TestTarget-Info.plist";
+				PRODUCT_NAME = Tests;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -381,20 +406,20 @@
 		920E2CC1190653B400FCDBEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LRTableViewTests.app/LRTableViewTests";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tests.app/Tests";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LRTableViewTests/LRTableViewTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "LRTableViewTestsTests/LRTableViewTestsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = TestsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -403,16 +428,16 @@
 		920E2CC2190653B400FCDBEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LRTableViewTests.app/LRTableViewTests";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tests.app/Tests";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LRTableViewTests/LRTableViewTests-Prefix.pch";
-				INFOPLIST_FILE = "LRTableViewTestsTests/LRTableViewTestsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Code/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = TestsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -421,7 +446,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		920E2C8C190653B400FCDBEE /* Build configuration list for PBXProject "LRTableViewTests" */ = {
+		920E2C8C190653B400FCDBEE /* Build configuration list for PBXProject "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				920E2CBB190653B400FCDBEE /* Debug */,
@@ -430,21 +455,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		920E2CBD190653B400FCDBEE /* Build configuration list for PBXNativeTarget "LRTableViewTests" */ = {
+		920E2CBD190653B400FCDBEE /* Build configuration list for PBXNativeTarget "TestTarget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				920E2CBE190653B400FCDBEE /* Debug */,
 				920E2CBF190653B400FCDBEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		920E2CC0190653B400FCDBEE /* Build configuration list for PBXNativeTarget "LRTableViewTestsTests" */ = {
+		920E2CC0190653B400FCDBEE /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				920E2CC1190653B400FCDBEE /* Debug */,
 				920E2CC2190653B400FCDBEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

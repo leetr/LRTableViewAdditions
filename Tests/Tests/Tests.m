@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface LRTableViewTestsTests : XCTestCase
+@interface Tests : XCTestCase
 
 @end
 
-@implementation LRTableViewTestsTests
+@implementation Tests
 
 - (void)setUp
 {
@@ -26,9 +26,8 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)test1Eq1
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssert(1 == 1, @"This should always be true");
 }
-
 @end
