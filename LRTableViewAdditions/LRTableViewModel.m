@@ -132,6 +132,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)sectionNum
 {
     LRTableViewSection *section = (LRTableViewSection *)[_sections objectAtIndex:sectionNum];
+    
     return section.headerTitle;
 }
 
@@ -145,19 +146,18 @@
 {
     LRTableViewSection *section = (LRTableViewSection *)[_sections objectAtIndex:sectionNum];
     
-    if (section.headerView == nil && section.headerTitle == nil) {
-        
-        return 0;
-    }
+    CGFloat height = 0.0f;
     
     if (section.headerView != nil) {
         
-        return section.headerView.frame.size.height;
+        height = section.headerView.frame.size.height;
     }
-    else {
+    else if (section.headerTitle != nil) {
         
-        return 22;
+        height = 22;
     }
+    
+    return (height < 0.0) ? 0 : height;
 }
 
 - (NSArray *)indexPathArrayForSection:(LRTableViewSection *)section fromIndexSet:(NSIndexSet *)indexset
@@ -196,7 +196,16 @@
 {
     if (section != nil && indexset != nil) {
         
-        [self.tableView insertRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
+        // Animate in section header if needed
+        if (section.numberOfRows == indexset.count) {
+        
+            NSIndexSet *set = [[NSIndexSet alloc] initWithIndex:[_sections indexOfObject:section]];
+            [self.tableView reloadSections:set withRowAnimation:animation];
+        }
+        else {
+        
+            [self.tableView insertRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
+        }
     }
 }
 
@@ -204,7 +213,15 @@
 {
     if (section != nil && indexset != nil) {
         
-        [self.tableView deleteRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
+        // Animated out section header if needed
+        if (section.numberOfRows == 0) {
+            
+            NSIndexSet *set = [[NSIndexSet alloc] initWithIndex:[_sections indexOfObject:section]];
+            [self.tableView reloadSections:set withRowAnimation:animation];
+        }
+        else {
+            [self.tableView deleteRowsAtIndexPaths:[self indexPathArrayForSection:section fromIndexSet:indexset] withRowAnimation:animation];
+        }
     }
 }
 

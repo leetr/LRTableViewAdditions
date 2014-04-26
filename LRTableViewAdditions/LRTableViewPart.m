@@ -13,6 +13,7 @@
     
     LRObservedObject *_observing;
     UITableViewCell *_cachedCellForHeightCalc;
+    NSInteger _numOfRows;
 }
 
 #pragma mark - Class Mathods
@@ -52,7 +53,8 @@
         _observing = [[LRObservedObject alloc] init];
         _cellStyle = UITableViewCellStyleDefault;                   // default cell style
         _cellHeight = 44;                                           // default cell height
-        _rowAnimation = UITableViewRowAnimationNone;                // default row animation
+        _rowAnimation = UITableViewRowAnimationAutomatic;           // default row animation
+        _numOfRows = -1;
     }
     
     return self;
@@ -74,6 +76,15 @@
         return;
     }
     
+    _numOfRows = [self numberOfRecordsInObservedObject];
+    
+    [self performSelector:@selector(handleObservedChange:) withObject:change];
+}
+
+#pragma mark - 
+
+- (void)handleObservedChange:(NSDictionary *)change
+{
     if (change != nil) {
         
         NSKeyValueChange kind = [[change valueForKey:NSKeyValueChangeKindKey] intValue];
@@ -147,12 +158,12 @@
                         }
                         else {
                             
-                            [self.tableView reloadData];
+                            [_tableView reloadData];
                         }
                     }
                     else {
                         
-                        [self.tableView reloadData];
+                        [_tableView reloadData];
                     }
                 }
             } break;
@@ -176,7 +187,7 @@
                     [self.delegate endUpdatesForTableViewPart:self];
                 }
                 break;
-             
+                
             case NSKeyValueChangeReplacement:
                 
                 if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(LRTableViewPartDelegate)]) {
@@ -193,8 +204,6 @@
         }
     }
 }
-
-#pragma mark - 
 
 - (void)stopObserving
 {
@@ -219,6 +228,16 @@
 
 - (NSInteger)numberOfRows
 {
+    if (_numOfRows < 0) {
+    
+        _numOfRows = [self numberOfRecordsInObservedObject];
+    }
+    
+    return _numOfRows;
+}
+
+- (NSInteger)numberOfRecordsInObservedObject
+{
     if (!_observing.object) {
         
         return 0;
@@ -227,9 +246,7 @@
     NSObject *obj = [_observing.object valueForKeyPath:_observing.keyPath];
     BOOL isArray = ([obj isKindOfClass:[NSArray class]]);
     
-    NSInteger numRows = (!isArray) ? ((obj) ? 1 : 0) : [(NSArray *)obj count];
-    
-    return numRows;
+    return (!isArray) ? ((obj) ? 1 : 0) : [(NSArray *)obj count];
 }
 
 - (void)populateCell:(UITableViewCell *)cell forRow:(NSInteger)row
@@ -410,9 +427,9 @@
 //
 - (void)didSelectRow:(NSInteger)row indexPath:(NSIndexPath *)indexPath
 {
-    if (self.onPartCellSelected != nil) {
+    if (self.onCellSelected != nil) {
         
-        self.onPartCellSelected(self, indexPath, row);
+        self.onCellSelected(self, indexPath, row);
     }
 }
 
@@ -420,12 +437,12 @@
 
 - (void)tableViewCell:(UITableViewCell *)cell didSelectView:(UIView *)view
 {
-    if (self.onPartCellViewSelected != nil) {
+    if (self.onCellViewSelected != nil) {
         
-        self.onPartCellViewSelected(self,
-                                    [self.tableView indexPathForCell:cell],
-                                    [cell.partRowNumber integerValue],
-                                    view);
+        self.onCellViewSelected(self,
+                                [self.tableView indexPathForCell:cell],
+                                [cell.partRowNumber integerValue],
+                                view);
     }
 }
 

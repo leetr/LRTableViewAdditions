@@ -39,8 +39,8 @@ typedef void (^PartCellViewSelected)(LRTableViewPart *part, NSIndexPath *indexPa
 @property (nonatomic, assign) CGFloat cellHeight;
 @property (nonatomic, assign) UITableViewRowAnimation rowAnimation;
 @property (nonatomic, assign) id<LRTableViewPartDelegate> delegate;
-@property (nonatomic, strong) PartCellSelected onPartCellSelected;
-@property (nonatomic, strong) PartCellViewSelected onPartCellViewSelected;
+@property (nonatomic, strong) PartCellSelected onCellSelected;
+@property (nonatomic, strong) PartCellViewSelected onCellViewSelected;
 
 + (LRTableViewPart *)partWithCellStyle:(UITableViewCellStyle)style;
 + (LRTableViewPart *)partWithCellIdentifier:(NSString *)identifier;
@@ -52,5 +52,8 @@ typedef void (^PartCellViewSelected)(LRTableViewPart *part, NSIndexPath *indexPa
 - (void)didSelectRow:(NSInteger)row indexPath:(NSIndexPath *)indexPath;
 - (void)observeObject:(NSObject *)object forKeyPath:(NSString *)keyPath;
 - (void)stopObserving;
+
+- (void)setOnCellSelected:(void(^)(LRTableViewPart *part, NSIndexPath *indexPath, NSInteger partRow))onPartCellSelected;
+- (void)setOnCellViewSelected:(void(^)(LRTableViewPart *part, NSIndexPath *indexPath, NSInteger partRow, UIView *view))onViewSelected;
 
 @end

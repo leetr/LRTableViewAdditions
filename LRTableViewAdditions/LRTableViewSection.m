@@ -136,19 +136,19 @@
 
 - (NSString *)headerTitle
 {
-    if (self.hideHeaderWhenEmpty && [self isEmpty]) {
-            
-        return nil;
+    NSString *title = nil;
+    
+    if (_headerTitle && !(self.hideHeaderWhenEmpty && [self isEmpty])) {
+
+        title = _headerTitle;
     }
-    else {
-        
-        return _headerTitle;
-    }
+    
+    return title;
 }
 
 - (UIView *)headerView
 {
-    if (self.hideHeaderWhenEmpty && [self isEmpty]) {
+    if (!_headerView || (self.hideHeaderWhenEmpty && [self isEmpty])) {
         
         return nil;
     }
