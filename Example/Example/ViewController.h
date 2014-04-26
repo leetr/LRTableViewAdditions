@@ -4,7 +4,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic) NSMutableArray *numbers;
+@property (nonatomic) NSMutableArray *actions;
 @property (nonatomic) NSMutableArray *objects;
 
 @end
