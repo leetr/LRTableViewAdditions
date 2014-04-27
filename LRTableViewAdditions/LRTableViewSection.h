@@ -1,8 +1,3 @@
-//
-//  Created by Denis Smirnov on 2014-04-21.
-//  Copyright (c) 2014 Leetr Inc. All rights reserved.
-//
-
 @import UIKit;
 
 #import "LRTableViewPart.h"
@@ -22,12 +17,11 @@
 
 @interface LRTableViewSection : NSObject <LRTableViewPartDelegate>
 
-@property (nonatomic) UITableView *tableView;
+@property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic) UIView *headerView;
 @property (nonatomic, copy) NSString *headerTitle;
 @property (nonatomic, assign) BOOL hideHeaderWhenEmpty;
 @property (nonatomic, assign) id<LRTableViewSectionDelegate> delegate;
-@property (nonatomic, assign) int tag;
 @property (nonatomic, readonly) NSArray *parts;
 
 + (LRTableViewSection *)sectionWithParts:(NSArray *)parts;

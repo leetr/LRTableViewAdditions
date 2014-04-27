@@ -1,8 +1,3 @@
-//
-//  Created by Denis Smirnov on 2014-04-21.
-//  Copyright (c) 2014 Leetr Inc. All rights reserved.
-//
-
 #import "UIViewController+LRTableViewAdditions.h"
 #import <objc/runtime.h>
 

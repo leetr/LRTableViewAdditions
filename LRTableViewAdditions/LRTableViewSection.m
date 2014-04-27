@@ -1,8 +1,3 @@
-//
-//  Created by Denis Smirnov on 2014-04-21.
-//  Copyright (c) 2014 Leetr Inc. All rights reserved.
-//
-
 #import "LRTableViewSection.h"
 
 @implementation LRTableViewSection {
@@ -31,6 +26,7 @@
     self = [super init];
     
     if (self) {
+        
         _parts = [[NSMutableArray alloc] init];
     }
     
@@ -66,10 +62,11 @@
     for (LRTableViewPart *part in _parts) {
         
         part.tableView = nil;
+        part.delegate = nil;
+        
         [part stopObserving];
     }
     
-#warning TODO: might crash here
     [_parts removeAllObjects];
 }
 
