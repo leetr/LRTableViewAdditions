@@ -69,6 +69,8 @@
     part.cellBindings = @{@"textLabel1.text" : @"[object]", @"textLabel2.text" : @"[object]"};
     part.onCellSelected = ^(LRTableViewPart *part, NSIndexPath *indexPath, NSInteger partRow) {
         
+        // We can't directly access modify self.objects because
+        // default syntesither for arrays does not post KVO notifications
         NSMutableArray *objects = [self mutableArrayValueForKey:@"objects"];
         
         if (partRow == 0) {
